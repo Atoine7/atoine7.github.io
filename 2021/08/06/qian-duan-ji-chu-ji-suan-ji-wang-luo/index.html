@@ -1,0 +1,1171 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="前端基础--计算机网络, Kerwin丶R">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>前端基础--计算机网络 | Kerwin丶R</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Kerwin丶R</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Kerwin丶R</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/../contentImg/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.png')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">前端基础--计算机网络</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/">
+                                <span class="chip bg-color">前端基础</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/" class="post-category">
+                                前端基础
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-08-06
+                </div>
+                
+
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    19 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>计算机网络知识是每个程序员的必备基础，任何消息文件的传输都与网络相关，本文介绍了作为一个前端应该掌握的计算机网络基础知识</p>
+<p>食用对象：初级前端</p>
+<p>美味指数：😋😋😋😋😋</p>
+<h3 id="1-介绍一下http状态码？⭐⭐⭐⭐⭐"><a href="#1-介绍一下http状态码？⭐⭐⭐⭐⭐" class="headerlink" title="1. 介绍一下http状态码？⭐⭐⭐⭐⭐"></a>1. 介绍一下http状态码？⭐⭐⭐⭐⭐</h3><p>状态码分类：</p>
+<ul>
+<li>1xx服务器收到请求</li>
+<li>2xx请求成功</li>
+<li>3xx重定向</li>
+<li>4xx客户端错误</li>
+<li>5xx服务端错误<br>常见状态码：</li>
+<li>200 成功</li>
+<li>301 永久重定向(配合location, 浏览器自动处理)</li>
+<li>302 临时重定向(配合location, 浏览器自动处理)</li>
+<li>304 资源未被修改(去请求服务端，服务端告诉这个资源在本地还有效，不用再请求)</li>
+<li>403 Forbidden: 服务器禁止访问，原因有很多，比如法律禁止、信息敏感、没有权限。</li>
+<li>404 资源未找到</li>
+<li>405: 请求方法不被服务器端允许。</li>
+<li>500: 仅仅告诉服务器出错了</li>
+<li>501: 表示客户端请求的功能还不支持。</li>
+<li>502: 服务器自身是正常的，但访问的时候出错了</li>
+<li>503: 表示服务器当前很忙，暂时无法响应服务。</li>
+</ul>
+<h3 id="2-介绍一下你知道的http-headers？⭐⭐⭐"><a href="#2-介绍一下你知道的http-headers？⭐⭐⭐" class="headerlink" title="2. 介绍一下你知道的http headers？⭐⭐⭐"></a>2. 介绍一下你知道的http headers？⭐⭐⭐</h3><p>常见的Request Headers：</p>
+<ul>
+<li>Accept浏览器可接收的数据格式</li>
+<li>Accept-Encoding浏览器可接收的压缩算法，如gzip</li>
+<li>Accept-language浏览器可接收的语言，如zh-CN</li>
+<li>Connection：keep-alive一次TCP连接重复使用</li>
+<li>cookie 本地信息</li>
+<li>Host 访问的服务器的域</li>
+<li>User-Agent(简称UA)浏览器信息</li>
+<li>Content-type发送数据的格式，如application/json<br>Response Headers：</li>
+<li>Content-type 返回数据的格式，如application/json</li>
+<li>Content-length 返回数据的大小，多少字节</li>
+<li>Content-Encoding返回数据的压缩算法，如gzip</li>
+<li>Set-cookie 服务端需要改cookie可以用这个</li>
+</ul>
+<h3 id="3-能否说一下浏览器缓存？⭐⭐⭐⭐⭐"><a href="#3-能否说一下浏览器缓存？⭐⭐⭐⭐⭐" class="headerlink" title="3. 能否说一下浏览器缓存？⭐⭐⭐⭐⭐"></a>3. 能否说一下浏览器缓存？⭐⭐⭐⭐⭐</h3><p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3cd482b9711349948537a8588fbfbea4~tplv-k3u1fbpfcp-watermark.image" alt="image.png"></p>
+<p>强缓存：<br><br>首先是检查强缓存，此时不需要发送HTTP请求。<br>有Expires和Cache-Control两个字段<br>Expires<br><br><code>Expires</code>即过期时间，存在于服务端返回的响应头中，告诉浏览器在这个过期时间之前可以直接从缓存里面获取数据，无需再次请求。<br>缺点：<br>服务器的时间和浏览器的时间可能并不一致，那服务器返回的这个过期时间可能就是不准确的。因此这个字段后来被抛弃了<br>Cache-Control <br><br>这个字段也是存在于它和<code>Expires</code>本质的不同在于它并没有采用具体的过期时间点这个方式，而是采用<code>过期时长</code>来控制缓存</p>
+<p>cache-control的值:</p>
+<ul>
+<li>max-age:设置s级别的缓存的最大过期时间</li>
+<li>no-cache:不用强制缓存，交给服务端处理</li>
+<li>no-store:不用强制缓存，也不用服务端的缓存措施</li>
+<li>private:只允许最终用户做缓存</li>
+<li>public:允许中间的代理，路由等做缓存<br>当<strong>Expires</strong>和<strong>Cache-Control</strong>同时存在的时候，<strong>Cache-Control</strong>会优先考虑。</li>
+</ul>
+<p>协商缓存：<br><br>强缓存失效之后，浏览器在请求头中携带相应的<strong>Last-Modified</strong> 或 <strong>ETag</strong>来向服务器发请求，由服务器根据这个值，来决定是否使用缓存，这就是<strong>协商缓存</strong>。<br>Last-Modified <br><br>最后修改时间</p>
+<ul>
+<li>在浏览器第一次给服务器发送请求后，服务器会在响应头中加上这个字段。</li>
+<li>浏览器接收到后，如果再次请求，会在请求头中携带<code>If-Modified-Since</code>字段，这个字段的值也就是服务器传来的最后修改时间。</li>
+<li>服务器拿到请求头中的<code>If-Modified-Since</code>的字段后，其实会和这个服务器中<code>该资源的最后修改时间</code>对比:</li>
+</ul>
+<ol>
+<li>如果请求头中的这个值小于最后修改时间，说明是时候更新了。返回新的资源，跟常规的HTTP请求响应的流程一样。</li>
+<li>否则返回304，告诉浏览器直接用缓存。</li>
+</ol>
+<p>ETag <br><br><code>ETag</code> 是服务器根据当前文件的内容，给文件生成的唯一标识，只要里面的内容有改动，这个值就会变。</p>
+<ul>
+<li>服务器通过<code>响应头</code>把这个值给浏览器。</li>
+<li>浏览器接收到<code>ETag</code>的值，会在下次请求时，将这个值作为<strong>If-None-Match</strong>这个字段的内容，并放到请求头中，然后发给服务器。</li>
+<li>服务器接收到<strong>If-None-Match</strong>后，会跟服务器上该资源的<strong>ETag</strong>进行比对:</li>
+</ul>
+<ol>
+<li>如果两者不一样，说明要更新了。返回新的资源，跟常规的HTTP请求响应的流程一样。</li>
+<li>否则返回304，告诉浏览器直接用缓存。</li>
+</ol>
+<h3 id="4-介绍一下刷新操作与缓存的关系⭐⭐"><a href="#4-介绍一下刷新操作与缓存的关系⭐⭐" class="headerlink" title="4. 介绍一下刷新操作与缓存的关系⭐⭐"></a>4. 介绍一下刷新操作与缓存的关系⭐⭐</h3><p>三种刷新操作：</p>
+<ul>
+<li>正常刷新：地址栏输入url，跳转链接，前进后退等</li>
+<li>手动刷新：F5，点击刷新按钮，右击菜单刷新</li>
+<li>强制刷新：ctrl + F5</li>
+</ul>
+<p>不同刷新操作，不同的缓存策略：</p>
+<ul>
+<li>正常刷新：强制缓存有效，协商缓存有效</li>
+<li>手动刷新：强制缓存失效，协商缓存有效</li>
+<li>强制刷新：强制缓存失效，协商缓存失效</li>
+</ul>
+<h3 id="5-从输入url到浏览器渲染流程⭐⭐⭐⭐⭐"><a href="#5-从输入url到浏览器渲染流程⭐⭐⭐⭐⭐" class="headerlink" title="5. 从输入url到浏览器渲染流程⭐⭐⭐⭐⭐"></a>5. 从输入url到浏览器渲染流程⭐⭐⭐⭐⭐</h3><ol>
+<li>按下回车后，浏览器首先会解析这个域名，查看本地的hosts文件，看有没有对应的规则，有就直接用hosts里面的IP</li>
+<li>如果hosts没有对应ip，浏览器就会发出一个DNS请求到本地DNS服务器，本地服务器如果有就直接返回，没有就向DNS根服务器查询DNS根服务器又会返回域服务器的地址，本地服务器会继续向域服务器发起请求，域服务器会返回域名的解析服务器的地址。本地服务器继续向域名解析服务器发起请求，这时会受到域名对应的ip，本地DNS服务器将ip返回给浏览器，并将ip存入缓存，方便下次访问。</li>
+<li>拿到ip地址后，会向对应的web服务器发起TCP请求，通过三次握手，建立TCP连接。</li>
+<li>服务器受到请求后，解析用户请求，知道了要调度哪个资源文件，处理用户的请求和参数，并调用数据库信息，最后将结果返回给服务器。</li>
+<li>关闭TCP连接，通过四次挥手</li>
+<li>浏览器获取HTML并开始构建DOM树，DOM树的构建是一个深度遍历的过程。</li>
+<li>获取CSS并构建CSSOM，构建CSSOM并不需要等待所有DOM都构建完毕，CSS的加载速度与构建CSSOM的速度将直接影响首屏渲染速度，所以CSS 放头部，可以提高页面的性能。早构建早渲染。</li>
+<li>将DOM与CSSOM结合，创建渲染树（Render Tree），Render Tree的每个节点都有了样式信息。</li>
+<li>布局(layout)，找到所有内容都处于网页的哪个位置。根据渲染树来布局，以计算每个节点的几何信息，即在屏幕上的确切位置和大小，所有相对值都将转换为屏幕上的绝对像素</li>
+<li>绘制(painting)，浏览器开始在屏幕上绘制像素。将各个节点绘制到屏幕上。</li>
+</ol>
+<h3 id="6-那说一下DOM树和CSSOM的构建过程？⭐⭐⭐"><a href="#6-那说一下DOM树和CSSOM的构建过程？⭐⭐⭐" class="headerlink" title="6. 那说一下DOM树和CSSOM的构建过程？⭐⭐⭐"></a>6. 那说一下DOM树和CSSOM的构建过程？⭐⭐⭐</h3><p>DOM树和CSSOM的构建过程其实差不多</p>
+<ol>
+<li>首先解析文件（HTML文件，CSS文件）</li>
+<li>将字节转换成字符</li>
+<li>确定tokens（标签）</li>
+<li>将tokens转换成节点</li>
+<li>最后根据节点构建DOM树 || CSSOM</li>
+</ol>
+<p>PS：构建DOM树的图和CSSOM的图，一看就明白</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1bb7be3820f64a45b891d88ac10a59d2~tplv-k3u1fbpfcp-zoom-1.image" alt="image.png"></p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/887641ec6517487bb8b05e7bb2726ca4~tplv-k3u1fbpfcp-zoom-1.image" alt="image.png"></p>
+<h3 id="7-说一下HTTPS？⭐⭐⭐⭐⭐"><a href="#7-说一下HTTPS？⭐⭐⭐⭐⭐" class="headerlink" title="7. 说一下HTTPS？⭐⭐⭐⭐⭐"></a>7. 说一下HTTPS？⭐⭐⭐⭐⭐</h3><p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8c04e9a0cf0d4fe4b9f67f57bf3bd100~tplv-k3u1fbpfcp-watermark.image" alt="185797810_2_20200319111944225.jfif"><br>https：<br><br>证书生成过程：<br></p>
+<ol>
+<li>服务器会自己生成一个私钥和公钥，CA公司自己也有一个公钥和私钥</li>
+<li>服务器向认证机构请求签字认证，认证机构用自己的私钥签字，于是任何有认证机构公钥的人都知道证书是它签过字的</li>
+<li>一般浏览器都有认证机构的名单和公钥，通过公钥认证就可以知道服务器是对的（因为信任认证机构，所以信任服务器）<br>浏览器与服务器：<br></li>
+<li>浏览器要访问一个服务器，服务器把证书和自己的公钥发过来。</li>
+<li>浏览器信任认证机构，解密后确认服务器正确，于是创建了一个随机密钥且用服务器的公钥加密</li>
+<li>此时只有服务器能够解密出浏览器的随机密钥，于是通信就用随机密钥对称加密</li>
+</ol>
+<h3 id="8-说一下http各个版本的区别？⭐⭐⭐⭐"><a href="#8-说一下http各个版本的区别？⭐⭐⭐⭐" class="headerlink" title="8. 说一下http各个版本的区别？⭐⭐⭐⭐"></a>8. 说一下http各个版本的区别？⭐⭐⭐⭐</h3><p>http/0.9版本：</p>
+<ul>
+<li>  只有一个命令GET,只支持纯文本内容</li>
+<li>  每次请求后，服务器和客户端之间的连接都将关闭。<br>http1.0版本:</li>
+<li>  扩充了传输内容格式，这使得互联网不仅可以传输文字，还能传输图像、视频、二进制等文件。</li>
+<li>  除了GET命令，还引 入了POST命令和HEAD命令。</li>
+<li>  默认不支持长连接，为了解决这个问题，浏览器用了一个非标准的Connection字段，设置keep-alive。<br>http1.1版本:</li>
+<li>  引入了持久连接，即TCP连接默认不关闭，可以被多个请求复用，不用声明Connection: keep-alive。</li>
+<li>  引入了管道机制，即在同一个TCP连接里，客户端可以同时发送多个请求，进一步改进了HTTP协议的效率。</li>
+<li>  新增方法：PUT、 PATCH、 OPTIONS、 DELETE。</li>
+<li>  客户端请求的头信息新增了Host字段，用来指定服务器的域名</li>
+<li>  http协议不带有状态，每次请求都必须附上所有信息。请求的很多字段都是重复的，浪费带宽，影响速度。<br>http2.0版本</li>
+<li>  二进制分帧：在HTTP1.x中，我们是通过文本的方式传输数据，文本的表现形式有多样性，因此要做到健壮性考虑的场景必然有很多，而二进制做到健壮和方便就要轻松许多。</li>
+<li>  多路复用：避免HTTP旧版本的队头阻塞问题，极大提高传输性能</li>
+<li>  头部压缩</li>
+<li>  服务器推送</li>
+</ul>
+<p>http1.1的长连接和http2.0的多路复用的区别？</p>
+<ul>
+<li>http1.1之前一次请求就会建立一次连接，http1.1通过管道化方式实现多个请求串行化共享同一个连接，但是一旦某个请求耗时严重，就导致后面的请求被阻塞，俗称线头阻塞；</li>
+<li>http2.0多个请求共享同一个连接，并且是并行的，所有请求不会影响其他请求；</li>
+</ul>
+<h3 id="9-介绍一下CDN？⭐⭐⭐"><a href="#9-介绍一下CDN？⭐⭐⭐" class="headerlink" title="9. 介绍一下CDN？⭐⭐⭐"></a>9. 介绍一下CDN？⭐⭐⭐</h3><p>CDN的全称是Content Delivery Network，即内容分发网络。<br><br>含义：</p>
+<ul>
+<li>它将网站的内容通过中心平台分发到部署在各地的边缘服务器进行缓存，再通过负载均衡技术将用户的请求转发到就近的服务器上去获取所需内容，降低网络堵塞，提供访问网站的响应速度和命中率。<br>过程:</li>
+<li>域名解析后会指向一个CDN网络专用的DNS服务器</li>
+<li>然后这个专门的CDN  DNS服务器会指向CDN负载均衡服务器</li>
+<li>之后又去访问这个负载均衡服务器，它会根据浏览器的网络地址，选择一台cdn服务器给你，可能是离你比较近，然后被分配的网络任务又不多的一台服务器，浏览器又会去访问这个cdn服务器</li>
+<li>如果这个cdn服务器没有相应的资源，就去上层缓存服务器查找，如果一直找都没有就会去源站拉取，并在每个cdn服务器缓存</li>
+</ul>
+<h3 id="10-介绍一下cookie，localStorage和sessionStorage？⭐⭐⭐⭐⭐"><a href="#10-介绍一下cookie，localStorage和sessionStorage？⭐⭐⭐⭐⭐" class="headerlink" title="10. 介绍一下cookie，localStorage和sessionStorage？⭐⭐⭐⭐⭐"></a>10. 介绍一下cookie，localStorage和sessionStorage？⭐⭐⭐⭐⭐</h3><p>cookie：<br><br>本身为了弥补<code>HTTP</code>在<strong>状态管理上的不足</strong>，用于浏览器和server通讯，被”借用”到本地存储来，可用document.cookie = ‘…’来修改<br><br>缺点<br></p>
+<ul>
+<li>  存储大小太小, 最大4KB</li>
+<li>  http请求时需要发送到服务端，增加请求数据量</li>
+<li>  不安全，以纯文本的形式在浏览器和服务器中传递，很容易被非法用户截获，然后进行一系列的篡改，在 Cookie 的有效期内重新发送给服务器，这是相当危险的</li>
+<li>  只能用document.cookie = ‘…’来修改，太过简陋<br>设置：<br></li>
+<li>  客户端发送 HTTP 请求到服务器</li>
+<li>  当服务器收到 HTTP 请求时，在响应头里面添加一个 Set-Cookie 字段</li>
+<li>  浏览器收到响应后保存下 Cookie</li>
+<li>  之后对该服务器每一次请求中都通过 Cookie 字段将 Cookie 信息发送给服务器。</li>
+</ul>
+<p>localStorage和sessionStorage</p>
+<ul>
+<li>  HTML5专门为存储而设计，最大可存5M</li>
+<li>  API简单易用 setItem getItem</li>
+<li>  不会随着http请求被发送出去<br>区别：</li>
+<li>  localStorage数据会永久存储，除非代码或手动删除，适合持久化缓存数据，比如页面的默认偏好配置，如官网的logo，存储Base64格式的图片资源等</li>
+<li>  sessionStorage数据只存在于当前会话，浏览器关闭则清空，适合一次性临时数据保存，存储本次浏览信息记录</li>
+<li>  一般用localStorage</li>
+</ul>
+<p>cookie localStorage sessionStorage区别</p>
+<ul>
+<li>  存储大小：cookie4K，storage5M</li>
+<li>  有效期：cookie拥有有效期，storage永久存储</li>
+<li>  cookie会跟随http发送到服务器端，存储在内存。storage只存储在浏览器端</li>
+<li>  路径：cookie有路径限制，storage只存储在域名下</li>
+<li>  API：Storage的API更具有易用性</li>
+</ul>
+<h3 id="11-介绍一下websocket？⭐⭐⭐"><a href="#11-介绍一下websocket？⭐⭐⭐" class="headerlink" title="11. 介绍一下websocket？⭐⭐⭐"></a>11. 介绍一下websocket？⭐⭐⭐</h3><p>websocket的由来。<br><br>HTTP 协议有一个缺陷：通信只能由客户端发起。<br></p>
+<p>特点:<br><br>    最大的特点是服务器可以主动向客户端推送信息，客户端也可以主动向服务器发送信息，是真正的双向平等对话<br><br>    数据格式比较轻量，性能开销小，通信高效<br><br>    与 HTTP 协议有着良好的兼容性<br><br>    没有同源限制，客户端可以与任意服务器通信<br></p>
+<p>WebSocket 对象作为一个构造函数，用于新建 WebSocket 实例。<br><br>var ws = new WebSocket(‘ws://localhost:8080’);<br></p>
+<p>属性举例：<br><br>实例对象的onopen属性，用于指定连接成功后的回调函数。<br></p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">ws<span class="token punctuation">.</span><span class="token function-variable function">onopen</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  ws<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token string">'Hello Server!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>实例对象的onclose属性，用于指定连接关闭后的回调函数<br><br>实例对象的onmessage属性，用于指定收到服务器数据后的回调函数<br><br>实例对象的onerror属性，用于指定报错时的回调函数</p>
+<h3 id="12-介绍一下计算机网络有哪几层？⭐⭐⭐⭐"><a href="#12-介绍一下计算机网络有哪几层？⭐⭐⭐⭐" class="headerlink" title="12. 介绍一下计算机网络有哪几层？⭐⭐⭐⭐"></a>12. 介绍一下计算机网络有哪几层？⭐⭐⭐⭐</h3><ul>
+<li>应用层：文件传输，电子邮件，文件服务，虚拟终端 TFTP，HTTP，SNMP，FTP，SMTP，DNS，Telnet</li>
+<li>表示层：数据格式化，代码转换，数据加密 没有协议</li>
+<li>会话层：解除或建立与别的接点的联系 没有协议</li>
+<li>传输层：提供端对端的接口 TCP，UDP</li>
+<li>网络层：为数据包选择路由 IP，ICMP，RIP，OSPF，BGP，IGMP</li>
+<li>数据链路层：传输有地址的帧以及错误检测功能 SLIP，CSLIP，PPP，ARP，RARP，MTU</li>
+<li>物理层：以二进制数据形式在物/理媒体上传输数据</li>
+</ul>
+<h3 id="13-介绍一下UDP协议？⭐⭐⭐"><a href="#13-介绍一下UDP协议？⭐⭐⭐" class="headerlink" title="13.介绍一下UDP协议？⭐⭐⭐"></a>13.介绍一下UDP协议？⭐⭐⭐</h3><p>UDP:</p>
+<ol>
+<li>在网络中它与TCP协议一样用于处理数据包，是一种无连接的协议</li>
+<li>有单播，多播，广播的功能</li>
+<li>UDP是面向报文的</li>
+<li>不可靠性，不会关心对方是否已经正确接收到数据了</li>
+<li>头部开销小，传输数据报文时是很高效的</li>
+</ol>
+<h3 id="14-介绍一下TCP协议？⭐⭐⭐⭐"><a href="#14-介绍一下TCP协议？⭐⭐⭐⭐" class="headerlink" title="14.介绍一下TCP协议？⭐⭐⭐⭐"></a>14.介绍一下TCP协议？⭐⭐⭐⭐</h3><p>TCP：</p>
+<ol>
+<li>一种面向连接的、可靠的传输层通信协议</li>
+<li>连接时需要进行三次握手，释放时需要进行四次挥手</li>
+<li>每条TCP传输连接只能有两个端点，只能进行点对点的数据传输，不支持多播和广播传输方式。</li>
+<li>拥有拥塞控制，提供全双工通信</li>
+</ol>
+<h3 id="15-流量控制和拥塞控制的区别⭐⭐⭐"><a href="#15-流量控制和拥塞控制的区别⭐⭐⭐" class="headerlink" title="15. 流量控制和拥塞控制的区别⭐⭐⭐"></a>15. 流量控制和拥塞控制的区别⭐⭐⭐</h3><p>流量控制和拥塞控制的区别：</p>
+<ul>
+<li>流量控制是为了解决发送方和接收方速度不同而导致的数据丢失问题，当发送方发送的太快，接收方来不及接受就会导致数据丢失，流量控制用滑动窗口的形式解决问题</li>
+<li>拥塞控制是为了解决过多的数据注入到网络，导致网络奔溃，超过负荷.当发送方发送数据大量的数据会注入到网络，如果没有限制，网络就会超负荷变卡，拥塞控制的用的是拥塞窗口解决的问题的</li>
+</ul>
+<h3 id="16-讲一下TCP三次握手⭐⭐⭐⭐⭐"><a href="#16-讲一下TCP三次握手⭐⭐⭐⭐⭐" class="headerlink" title="16.讲一下TCP三次握手⭐⭐⭐⭐⭐"></a>16.讲一下TCP三次握手⭐⭐⭐⭐⭐</h3><p>TCP三次握手；</p>
+<ol>
+<li>首先客户端发一个SYN报文，SYN=1，和一个初始序号seq=x，进入SYN_SEND状态</li>
+<li>服务器收到客户端的SYN报文后，也会发送一个SYN=1，同时把客户端的序号seq+1作为ack的值返回，还会发送一个自己的序号seq=y，此时服务器进入SYN_RECD状态。</li>
+<li>客户端收到SYN报文后，会发送一个ACK报文，就是把服务端的seq+1返回，还会发送自己的seq=x+1，当服务器收到ACK报文后，就处于ESTABLISHED状态，双方建立了连接</li>
+</ol>
+<h3 id="17-为什么需要三次握手，两次不行吗？⭐⭐⭐⭐⭐"><a href="#17-为什么需要三次握手，两次不行吗？⭐⭐⭐⭐⭐" class="headerlink" title="17. 为什么需要三次握手，两次不行吗？⭐⭐⭐⭐⭐"></a>17. 为什么需要三次握手，两次不行吗？⭐⭐⭐⭐⭐</h3><p>需要三次握手才能确认双方都有接收与发送能力，如果只有两次握手，如果客户端的一次请求滞留很久到，就会导致服务器一直等待客户端发送数据，浪费资源</p>
+<h3 id="18-什么是半连接队列？⭐⭐⭐"><a href="#18-什么是半连接队列？⭐⭐⭐" class="headerlink" title="18. 什么是半连接队列？⭐⭐⭐"></a>18. 什么是半连接队列？⭐⭐⭐</h3><p>服务器第一次收到客户端的SYN之后，就会处于SYN_RCVD状态，此时双方还没有完全建立连接，服务器会把此种状态下请求连接放在一个队列里，就称之为半连接队列</p>
+<h3 id="19-三次握手中可以携带数据吗？⭐⭐⭐⭐"><a href="#19-三次握手中可以携带数据吗？⭐⭐⭐⭐" class="headerlink" title="19. 三次握手中可以携带数据吗？⭐⭐⭐⭐"></a>19. 三次握手中可以携带数据吗？⭐⭐⭐⭐</h3><ul>
+<li>第三次握手时可以，第一次和第二次不行，第一次携带数据，有人在第一次握手中的SYN报文中注入大量数据，攻击者不会理会服务器的接收，发送能力是否正常，疯狂发送报文的话，会让服务器花很多时间来接收，而第三次的话，此时客户端已经处于ESTABLISHED状态，对于客户端来说，已经建立连接了，并且知道服务器的接收和发送能力是正常的了，所以能携带数据也正常</li>
+</ul>
+<h3 id="20-介绍一下TCP四次挥手⭐⭐⭐⭐⭐"><a href="#20-介绍一下TCP四次挥手⭐⭐⭐⭐⭐" class="headerlink" title="20. 介绍一下TCP四次挥手⭐⭐⭐⭐⭐"></a>20. 介绍一下TCP四次挥手⭐⭐⭐⭐⭐</h3><p>以客户端想要关闭为例子：</p>
+<ol>
+<li>发出连接释放报文段(FIN=1，序号seq=u)，并停止发送数据，主动关闭TCP连接，进入FIN_WAIT1状态，等待服务端的确认</li>
+<li>服务端收到连接释放报文段后发出确认报文段（ACK=1，确认号ack=u+1，序号seq=v），服务端进入CLOSE_WAIT状态，此时TCP处于半关闭状态，当客户端收到服务端的连接释放时，进入FIN_WAIT2状态，等待服务端发出连接释放报文段</li>
+<li>如果服务端也想断开连接了，就发送连接释放报文段(FIN=1，ACK=1，seq=w，ack=u+1)，服务端进入LAST_ACK(最后确认)状态，等待客户端的确认</li>
+<li>客户端收到连接释放报文段后，发出确认报文段(ACK=1，seq=u+1，ack=w+1)，客户端进入TIME_WAIT状态。此时TCP未释放掉，需要经过时间等待计时器设置的实践2MSL(最长报文段寿命的2倍)后客户端才进入CLOSED状态</li>
+</ol>
+<h3 id="21-为什么需要四次挥手？⭐⭐⭐⭐⭐"><a href="#21-为什么需要四次挥手？⭐⭐⭐⭐⭐" class="headerlink" title="21. 为什么需要四次挥手？⭐⭐⭐⭐⭐"></a>21. 为什么需要四次挥手？⭐⭐⭐⭐⭐</h3><p>因为关闭连接时，当服务端收到FIN报文时，很可能不会立即关闭SOCKET，所以只能先回复一个ACK报文，告诉客户端，你发的FIN报文我收到了，<br>只有等我服务端所有的报文都发送完了，我才能发送FIN报文，因此不能一起发送。</p>
+<h3 id="22-为什么需要等待2MSL⭐⭐⭐"><a href="#22-为什么需要等待2MSL⭐⭐⭐" class="headerlink" title="22. 为什么需要等待2MSL⭐⭐⭐"></a>22. 为什么需要等待2MSL⭐⭐⭐</h3><p>为了保证客户端发送的最后一个ACK报文段能够到达服务器，如果ACK丢失后了，服务器会超时重传，客服端能在2MSL事件内收到这个重传的报文段，若立即释放，则无法收到服务端重传的报文段，不会再发送确认报文段，则服务端无法正常进入CLOSED状态。</p>
+<h3 id="23-除了四次挥手还能怎么断开连接：⭐⭐"><a href="#23-除了四次挥手还能怎么断开连接：⭐⭐" class="headerlink" title="23. 除了四次挥手还能怎么断开连接：⭐⭐"></a>23. 除了四次挥手还能怎么断开连接：⭐⭐</h3><p>发送reset报文：</p>
+<ul>
+<li>如果主机需要尽快关闭连接（或连接超时，或端口、主机不可达）时，发送RST包（RST表示复位）强制关闭TCP连接。发送RST包关闭连接时，可以丢弃缓存区的包直接发送RST包，而接收端收到RST包后，也不必发送ACK包来确认。<br>Reset报文的利用：</li>
+</ul>
+<ol>
+<li>安全设备利用reset报文阻断异常连接</li>
+</ol>
+<ul>
+<li>  安全设备（如防火墙、入侵检测系统等）在发现某些可疑的TCP连接时，会构造交互双方的reset报文发给对端，让对端释放该TCP连接。比如入侵检测检测到黑客攻击的TCP连接，其构造成被攻击端给黑客主机发送reset报文，让黑客主机释放攻击连接。</li>
+</ul>
+<ol start="2">
+<li>利用reset报文实施攻击</li>
+</ol>
+<ul>
+<li>  安全设备可以利用reset报文达到安全防护的效果，黑客和攻击者也可以利用reset报文实现对某些主机的入侵和攻击，最常见的就是TCP会话劫持攻击。关于TCP会话劫持的相关知识请参考第三章《TCP会话劫持》一文。</li>
+</ul>
+<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>　　非常感谢您到阅读到最后，如果您觉得对您有帮助的话，希望能够点个赞，有任何问题都可以联系我，希望能够一起进步。<br><br>　　最后祝您前程似锦，我们各自攀登，高处相见🌈！</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Kerwin丶R</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://kerwin-r.github.io/2021/08/06/qian-duan-ji-chu-ji-suan-ji-wang-luo/">http://kerwin-r.github.io/2021/08/06/qian-duan-ji-chu-ji-suan-ji-wang-luo/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Kerwin丶R</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/">
+                                    <span class="chip bg-color">前端基础</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2021/08/06/qian-duan-ji-chu-ji-suan-ji-wang-luo/">
+                    <div class="card-image">
+                        
+                        <img src="/../contentImg/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.png" class="responsive-img" alt="前端基础--计算机网络">
+                        
+                        <span class="card-title">前端基础--计算机网络</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            计算机网络知识是每个程序员的必备基础，任何消息文件的传输都与网络相关，本文介绍了作为一个前端应该掌握的计算机网络基础知识
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-06
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    前端基础
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/">
+                        <span class="chip bg-color">前端基础</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/07/31/qian-duan-ji-chu-js-shi-ling-hun/">
+                    <div class="card-image">
+                        
+                        <img src="/../contentImg/JS%E6%98%AF%E7%81%B5%E9%AD%82.png" class="responsive-img" alt="前端基础--JS是灵魂">
+                        
+                        <span class="card-title">前端基础--JS是灵魂</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            在前端里，JS是灵魂，是一切逻辑的基础，是前端工程师的根本技术，学好JS才能在之后的框架学习和底层学习中不再泛泛而谈
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-31
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    前端基础
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/">
+                        <span class="chip bg-color">前端基础</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('5'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2021</span>
+            
+            <span id="year">2021</span>
+            <a href="/about" target="_blank">Kerwin丶R</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">20.2k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2021";
+                    var startMonth = "5";
+                    var startDate = "1";
+                    var startHour = "22";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=709596687" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 709596687" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
