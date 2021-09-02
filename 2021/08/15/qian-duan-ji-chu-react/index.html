@@ -316,7 +316,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    30 分
+                    35 分
                 </div>
                 
 
@@ -788,6 +788,83 @@ search
 
 <p><em>mapStateToProps：</em> 此函数将state映射到 props 上，因此只要state发生变化，新 state 会重新映射到 props。 这是订阅store的方式。</p>
 <p><em>mapDispatchToProps：</em> 用来建立组件的参数到store.dispatch方法的映射。触发action更新reducer，进而更新state，引起UI数据的变化</p>
+<h3 id="24-介绍一下hooks特点，和类组件的区别"><a href="#24-介绍一下hooks特点，和类组件的区别" class="headerlink" title="24. 介绍一下hooks特点，和类组件的区别"></a>24. 介绍一下hooks特点，和类组件的区别</h3><p><strong>函数组件的特点：</strong></p>
+<ul>
+<li>没有组件实例</li>
+<li>没有生命周期</li>
+<li>没有state和setState，只能接收props</li>
+</ul>
+<p><strong>class组件的问题：</strong></p>
+<ul>
+<li>大型组件很难拆分和重构，很难测试（即class不易拆分）</li>
+<li>相同业务逻辑，分散到各个方法中，逻辑混乱</li>
+<li>复用逻辑变得复杂，如mixins，HOC，Render Props</li>
+<li>生命周期复杂</li>
+</ul>
+<p><strong>React Hooks 解决了哪些问题：</strong></p>
+<ul>
+<li>在组件之间复用状态逻辑很难，Hook 使我们在无需修改组件结构的情况下复用状态逻辑</li>
+<li>复杂组件变得难以理解，比如componentDidMount里很多不同的逻辑，而hooks有助于关注分离，可以一个逻辑写在一堆</li>
+<li>难以理解的this指向，hooks里没有this</li>
+<li>复杂的生命周期</li>
+</ul>
+<h3 id="25-介绍一下知道的Hooks"><a href="#25-介绍一下知道的Hooks" class="headerlink" title="25. 介绍一下知道的Hooks"></a>25. 介绍一下知道的Hooks</h3><p><strong>useState：</strong></p>
+<p>useState 是允许我们在 React 函数组件中添加 state 的一个 Hook</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">const</span> <span class="token punctuation">[</span>当前状态的值<span class="token punctuation">,</span> 设置状态值的函数<span class="token punctuation">]</span> <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">useState</span><span class="token punctuation">(</span>初始值<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><em>和类组件state区别：</em><br>类组件中的 state 只能有一个。一般是把一个对象作为一个 state，然后再通过对象不同的属性来表示不同的状态。<br>而函数组件中用 useState 则可以很容易地创建多个 state，更加语义化。</p>
+<p><em>为什么 useState 要使用数组而不是对象：</em> 为了降低使用的复杂度，返回数组的话可以直接根据顺序解构，而返回对象的话要想使用多次就需要定义别名了</p>
+<p><strong>Effect Hook：</strong></p>
+<p>让函数组件模拟生命周期，默认函数组件没有生命周期<br><br>函数组件是一个纯函数，执行完即销毁，自己无法实现生命周期，使用Effect Hook把生命周期钩到纯函数中</p>
+<p><em>useEffect</em></p>
+<ul>
+<li>没有依赖项，那它会在每次render之后执行</li>
+<li>模拟componentDidMount-useEffect依赖[]</li>
+<li>模拟componentDidUpdate-useEffect无依赖，或者依赖[a, b]</li>
+<li>模拟componentWillUnMount-useEffect中返回一个函数</li>
+</ul>
+<p><em>ps：</em></p>
+<ul>
+<li>此时并不完全等同于WillUnMount，准确的说里面return的函数，会在下一次effect执行之前，被执行</li>
+<li>也就是说如果当前useEffect模拟的是Mount和Update，在props发生变化，Update前也会执行return里的</li>
+</ul>
+<p>useEffect让纯函数有了副作用，副作用就是对函数之外造成影响，如设置全局定时任务，而组件需要副作用，所以需要useEffect钩到纯函数中</p>
+<p><em>useEffect 与 useLayoutEffect 的区别：</em></p>
+<ul>
+<li>两者都是用于处理副作用，底层的函数签名是完全一致的</li>
+<li>useEffect 是渲染完之后异步执行的，所以可能会导致闪烁</li>
+<li>useLayoutEffect是同步执行的，执行时机是浏览器把内容真正渲染到界面之前，等它执行完再渲染上去，就避免了闪烁现象。</li>
+<li>也就是说我们最好把操作 dom 的相关操作放到 useLayoutEffect 中去，避免导致闪烁。</li>
+</ul>
+<p><strong>useCallback：</strong></p>
+<p>  主要用于缓存函数，函数式组件每次任何一个 state 的变化都会导致整个组件刷新，一些函数是没有必要被重新刷新的，此时就应该缓存起来，提高性能</p>
+<p><strong>useMemo：</strong></p>
+<p>  主要用于缓存计算结果的值，一般是针对组件的, 减少组件的不必要更新.</p>
+<p><strong>useRef</strong></p>
+<ul>
+<li>返回一个可变的 ref 对象，其.current 属性被初始化为传入的参数。</li>
+<li>返回的 ref 对象在组件的整个生命周期内保持不变，也就是说每次重新渲染函数组件时，返回的 ref 对象都是同一个。</li>
+</ul>
+<p><em>应用场景：</em></p>
+<ol>
+<li>用于获取DOM节点<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">const</span> btnRef <span class="token operator">=</span> <span class="token function">useRef</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">&lt;</span>button ref<span class="token operator">=</span><span class="token punctuation">&#123;</span>btnRef<span class="token punctuation">&#125;</span><span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>获取子组件的实例(只有类组件可用)</li>
+<li>在函数组件中的一个全局变量，不会因为重复 render 重复申明， 类似于类组件的 this.xxx</li>
+</ol>
+<p><strong>useContext:</strong></p>
+<p>接收一个 context 对象（React.createContext 的返回值）并返回该 context 的当前值</p>
+<p><strong>useReducer</strong></p>
+<p>useState 的替代方案，接收一个reducer，并返回当前的 state 以及与其配套的 dispatch 方法</p>
+<p><em>适用场景：</em></p>
+<ul>
+<li>state 逻辑较复杂且包含多个子值，或者下一个 state 依赖于之前的 state</li>
+<li>使用 useReducer 还能给那些会触发深更新的组件做性能优化</li>
+</ul>
+<p><em>useReducer和redux的区别</em></p>
+<ul>
+<li>useReducer是useState的代替方案，用于state复杂变化</li>
+<li>useReducer是单个组件状态管理，组件通讯还需要props</li>
+<li>redux是全局的状态管理，多组件共享数据</li>
+</ul>
 <h2 id="感谢阅读"><a href="#感谢阅读" class="headerlink" title="感谢阅读"></a>感谢阅读</h2><p>非常感谢您到阅读到最后，如果有错误希望您能够指出，以免误导其他人，如果您觉得对您有帮助的话，希望能够点个赞，加个关注，有任何问题都可以联系我，希望能够一起进步。</p>
 <p>最后祝您前程似锦，我们各自攀登，高处相见🌈！</p>
 
@@ -1133,7 +1210,7 @@ search
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">31k</span>&nbsp;字
+                class="white-color">32.1k</span>&nbsp;字
             
             
             
