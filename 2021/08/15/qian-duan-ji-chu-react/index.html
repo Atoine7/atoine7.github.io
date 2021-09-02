@@ -1,0 +1,1379 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="前端基础--React, Kerwin丶R">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>前端基础--React | Kerwin丶R</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Kerwin丶R</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Kerwin丶R</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/../contentImg/React.png')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">前端基础--React</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/">
+                                <span class="chip bg-color">前端基础</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/" class="post-category">
+                                前端基础
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-08-15
+                </div>
+                
+
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    30 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>React作为当前国内前端两大框架之一，是我们必须掌握的，更是进大厂必不可少的，本文详细介绍了react的基础和原理，让你对react有更深的认识和见解</p>
+<p>食用对象：初级前端<br>美味指数：😋😋😋😋😋</p>
+<h3 id="1-react事件机制-⭐⭐⭐⭐⭐"><a href="#1-react事件机制-⭐⭐⭐⭐⭐" class="headerlink" title="1.react事件机制 ⭐⭐⭐⭐⭐"></a>1.react事件机制 ⭐⭐⭐⭐⭐</h3><p><strong>采取事件合成模式的原因：</strong></p>
+<ol>
+<li>如果DOM上绑定了过多的事件处理函数，整个页面响应以及内存占用可能都会受到影响。</li>
+<li>React为了避免这类DOM事件滥用，将事件绑定在root统一管理，相当于事件委托，防止很多事件直接绑定在原生的dom元素上，造成一些不可控的情况</li>
+<li>React 想实现一个全浏览器的框架，为了实现这种目标就需要提供全浏览器一致性的事件系统，以此抹平不同浏览器的差异。</li>
+</ol>
+<p><strong>步骤</strong></p>
+<ul>
+<li>事件绑定：当用户在为onClick添加函数时，React并没有将Click时间绑定在DOM上面。而是在root处监听所有支持的事件（相同于使用统一的事件监听器，这个事件监听器上维持了一个映射来保存所有组件内部事件监听和处理函数）<br></li>
+<li>事件触发：当事件发生并冒泡至root处时，使用统一的分发函数dispatchEvent将指定函数执行</li>
+</ul>
+<p><strong>特点</strong></p>
+<ul>
+<li>大部分事件代理到root上，达到性能优化的目的</li>
+<li>对于每种类型的事件，拥有统一的分发函数dispatchEvent</li>
+<li>事件对象是合成对象，不是原生的, 模拟出来DOM事件所有能力</li>
+<li>event.nativeEvent可以得到原生事件对象</li>
+<li>在传递参数时，最后直接一个参数，即可接收event</li>
+</ul>
+<p><strong>合成事件和原生事件的区别</strong></p>
+<ol>
+<li>写法不同，在原生事件中，事件名称使用小写，而 React 中使用驼峰命名</li>
+<li>阻止默认行为不同，在 HTML 中，阻止事件的默认行为使用 return false，而 React 中必须调用 preventDefault。</li>
+<li>使用 JSX 语法时需要传入一个函数作为事件处理函数，而不是一个字符串；</li>
+<li>机制不同，原生是直接将事件绑定到当前元素，React 中的事件机制则分为两个阶段：事件注册、事件分发。所有的事件都会注册到 root 上，当触发时，会采用事件冒泡的形式冒泡到root上面，然后React将事件封装给正式的函数处理运行和处理。</li>
+</ol>
+<h3 id="2-什么是JSX：⭐⭐⭐⭐⭐"><a href="#2-什么是JSX：⭐⭐⭐⭐⭐" class="headerlink" title="2. 什么是JSX：⭐⭐⭐⭐⭐"></a>2. 什么是JSX：⭐⭐⭐⭐⭐</h3><pre class="line-numbers language-js" data-language="js"><code class="language-js">React<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'tag'</span><span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">,</span> child1<span class="token punctuation">,</span> child2<span class="token punctuation">,</span> child3<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>jsx是JavaScript的一种语法扩展，充分具备JavaScript的能力</li>
+<li>JSX会被babel编译为：React.createElement()，第一个参数是标签名，第二个是属性，第三个是孩子</li>
+<li>JSX语法糖允许前端开发者使用我们最熟悉的类HTML标签语法来创建虚拟DOM，这个函数返回的是vnode，然后通过patch去渲染</li>
+</ul>
+<h3 id="3-react组件通信-⭐⭐⭐⭐⭐"><a href="#3-react组件通信-⭐⭐⭐⭐⭐" class="headerlink" title="3. react组件通信 ⭐⭐⭐⭐⭐"></a>3. react组件通信 ⭐⭐⭐⭐⭐</h3><p><strong>1. 采用props传递需要的信息</strong></p>
+<p><strong>2. context：</strong><br><br>在React中，数据传递一般使用props传递数据，维持单向数据流，当你不想在组件树中通过逐层传递props的方式来传递数据时，可以使用Context来实现跨层级的组件数据传递<br><em>原理</em>：<br><br>由于组件 的 Context 由其父节点链上所有组件通 过 getChildContext（）返回的Context对象组合而成，所以，组件通过Context是可以访问到其父组件链上所有节点组件提供的Context的属性。<br><br><em>应用场景</em>：<br><br>语言，主题等逻辑不复杂但是要一层一层往下传递<br><br><em>过程</em>：<br></p>
+<ul>
+<li>首先用React.createContext(默认值)创建一个context：xxx</li>
+<li>然后用这个xxx.Provider包裹组件，上面有一个value={需要改变且接收的值}</li>
+<li>（class组件消费的时候消费组件.contextType = xxx(刚定义的context)，然后可以直接获取this.context里的值）</li>
+<li>（函数组件就用xxx.Consumer包裹内容，里面用一个函数就能得到value值）</li>
+</ul>
+<p><strong>3. 通过redux等进行全局状态管理</strong></p>
+<p><strong>4. 自定义发布订阅模式</strong></p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> EventEmitter <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'events'</span><span class="token punctuation">;</span>
+组件<span class="token number">1</span>：
+  <span class="token keyword">this</span><span class="token punctuation">.</span>eventEmitter <span class="token operator">=</span> emitter<span class="token punctuation">.</span><span class="token function">addListener</span><span class="token punctuation">(</span><span class="token string">'changeMessage'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">message</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+       message<span class="token punctuation">,</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+组件<span class="token number">2</span>：
+    <span class="token function-variable function">handleClick</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">message</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+        emitter<span class="token punctuation">.</span><span class="token function">emit</span><span class="token punctuation">(</span><span class="token string">'changeMessage'</span><span class="token punctuation">,</span> message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>5. 通过路由传参</strong></p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">params
+  <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>history<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>pathname<span class="token operator">:</span><span class="token string">"/path/"</span> <span class="token operator">+</span> name<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  读取参数用<span class="token operator">:</span><span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>match<span class="token punctuation">.</span>params<span class="token punctuation">.</span>name
+query
+  <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>history<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>pathname<span class="token operator">:</span><span class="token string">"/query"</span><span class="token punctuation">,</span>query<span class="token operator">:</span> <span class="token punctuation">&#123;</span> name <span class="token operator">:</span> <span class="token string">'sunny'</span> <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  读取参数用<span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>location<span class="token punctuation">.</span>query<span class="token punctuation">.</span>name
+state
+  <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>history<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>pathname<span class="token operator">:</span><span class="token string">"/sort "</span><span class="token punctuation">,</span>state <span class="token operator">:</span> <span class="token punctuation">&#123;</span> name <span class="token operator">:</span> <span class="token string">'sunny'</span> <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  读取参数用<span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>location<span class="token punctuation">.</span>query<span class="token punctuation">.</span>state
+search
+  <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>history<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>pathname<span class="token operator">:</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">/web/search?id </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>row<span class="token punctuation">.</span>id<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  读取参数用<span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>location<span class="token punctuation">.</span>search<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><em>优缺点：</em></p>
+<ul>
+<li>params在HashRouter和BrowserRouter路由中刷新页面参数都不会丢失</li>
+<li>state在BrowserRouter中刷新页面参数不会丢失，在HashRouter路由中刷新页面会丢失</li>
+<li>query：在HashRouter和BrowserRouter路由中刷新页面参数都会丢失</li>
+<li>query和 state 可以传对象</li>
+</ul>
+<p><strong>6. ref</strong></p>
+<p>原理: 通过 React 的 ref 属性获取到整个子组件实例,再进行操作，注意如果是hooks就必须绑定到DOM上，或者用useImperativeHandle</p>
+<h3 id="4-说一下高阶组件和render-props-⭐⭐⭐⭐⭐"><a href="#4-说一下高阶组件和render-props-⭐⭐⭐⭐⭐" class="headerlink" title="4. 说一下高阶组件和render props ⭐⭐⭐⭐⭐"></a>4. 说一下高阶组件和render props ⭐⭐⭐⭐⭐</h3><p><strong>高阶组件：</strong></p>
+<p>HOC是一种组件的设计模式，HOC接受一个组件和额外的参数（如果需要），返回一个新的组件。HOC 是纯函数，没有副作用。<br><br>1.透传所有props  {…this.props}<br><br>2.增加xxx属性<br><br><em>优点</em>：逻辑复用、不影响被包裹组件的内部逻辑。<br><br><em>缺点</em>：会增加组件层级，比如说透传成本，透传覆盖等</p>
+<p><strong>render prop：</strong></p>
+<p>render prop是指一种在 React 组件之间使用一个值为函数的 prop 共享代码的简单技术，具有render prop 的组件接受一个返回React元素的函数，将render的渲染逻辑注入到组件内部<br><br><em>优点</em>：数据共享、代码复用，将组件内的state作为props传递给调用者，将渲染逻辑交给调用者。<br><br><em>缺点</em>：无法在 return 语句外访问数据、嵌套写法不够优雅</p>
+<h3 id="5-react生命周期-⭐⭐⭐⭐⭐"><a href="#5-react生命周期-⭐⭐⭐⭐⭐" class="headerlink" title="5. react生命周期 ⭐⭐⭐⭐⭐"></a>5. react生命周期 ⭐⭐⭐⭐⭐</h3><p><strong>组件挂载阶段：</strong></p>
+<p><em>1. constructor：</em></p>
+<ul>
+<li>   若没有显式定义它，会有一个默认的构造函数</li>
+<li>   若显式定义了构造函数，我们必须在构造函数中执行 super(props)，为了继承父亲的this对象，否则无法在构造函数中拿到this。</li>
+<li>   如果不初始化 state 或不进行方法绑定，则不需要为 React 组件实现构造函数Constructor。<br>constructor中通常只做两件事：</li>
+<li>初始化组件的 state</li>
+<li>给事件处理方法绑定 this</li>
+</ul>
+<p><em>2. getDerivedStateFromProps</em></p>
+<ul>
+<li>是静态方法，所以不能在这个函数里使用 this</li>
+<li>有两个参数 props 和 state，分别指接收到的新参数和当前组件的 state 对象</li>
+<li>这个函数会返回一个对象用来更新当前的 state 对象，如果不需要更新可以返回 null。</li>
+<li>该函数会在装载时，接收到新的 props 或者调用了 setState 和 forceUpdate 时被调用。如当接收到新的属性想修改 state ，就可以使用。</li>
+</ul>
+<p><em>3. render</em></p>
+<p>  render是React 中最核心的方法，一个组件中必须要有这个方法，它会根据状态 state 和属性 props 渲染组件</p>
+<p><em>4. componentDidMount</em></p>
+<p>会在组件挂载后（插入 DOM 树中）立即调用。</p>
+<p>该阶段通常进行以下操作：</p>
+<ul>
+<li>  执行依赖于DOM的操作；</li>
+<li>  发送网络请求；（官方建议）</li>
+<li>  添加订阅消息（会在componentWillUnmount取消订阅）；</li>
+</ul>
+<p><strong>组件更新阶段：</strong></p>
+<p>当组件的 props 改变了，或组件内部调用了 setState/forceUpdate，会触发更新重新渲染，这个过程可能会发生多次</p>
+<p><em>1. getDerivedStateFromProps</em></p>
+<p><em>2. shouldComponentUpdate</em></p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token function">shouldComponentUpdate</span><span class="token punctuation">(</span><span class="token parameter">nextProps<span class="token punctuation">,</span> nextState</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>nextState<span class="token punctuation">,</span>count <span class="token operator">!==</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>count<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>  <span class="token comment">//可以渲染</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token keyword">return</span> <span class="token boolean">false</span> <span class="token comment">//不重复渲染</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>SCU默认返回true，即React默认重新渲染所有子组件</li>
+<li>必须配合“不可变值”一起使用</li>
+<li>可先不用SCU，有性能问题时再考虑使用</li>
+</ul>
+<p><em>SCU总结：</em><br><br>　　SCU是一个钩子函数，可以在里面自定义是否重新渲染的逻辑，它返回一个布尔值，如果没有自定义每次都会默认返回false，利用这个生命周期函数可以让不需要更新的子组件不更新来提升渲染性能，正是因为这个，react的不可变值原则非常重要，每次setState都应需要保证原来state不改变，不然使用SCU或者PureComponent时浅比较就可能对数组和对象的变化出问题</p>
+<p><strong>3. render</strong></p>
+<p><strong>4. getSnapshotBeforeUpdate</strong></p>
+<ul>
+<li>有两个参数 prevProps 和 prevState，表示更新之前的 props 和 state</li>
+<li>它使得组件能在发生更改之前从 DOM 中捕获一些信息（例如，滚动位置）。</li>
+<li>此生命周期方法的任何返回值将作为参数传递给 componentDidUpdate()。</li>
+</ul>
+<p><strong>5. componentDidUpdate</strong></p>
+<p>组件更新后的生命周期，可以对DOM进行操作</p>
+<p>该方法有三个参数：</p>
+<ul>
+<li> prevProps: 更新前的props</li>
+<li> prevState: 更新前的state</li>
+<li> snapshot: getSnapshotBeforeUpdate()生命周期的返回值</li>
+</ul>
+<p><strong>组件卸载阶段</strong></p>
+<p><em>1. componentWillUnmount()</em></p>
+<p>会在组件卸载及销毁之前直接调用，应该再这个方法中使用 setState，因为组件一旦被卸载，就不会再装载，也就不会重新渲染。</p>
+<p>作用：</p>
+<ul>
+<li>清除 timer，取消网络请求或清除</li>
+<li>取消在 componentDidMount() 中创建的订阅等；</li>
+</ul>
+<p><strong>错误处理阶段</strong><br><br><em>1. componentDidCatch(error, info)</em></p>
+<p>此生命周期在后代组件抛出错误后被调用。</p>
+<p>它接收两个参数∶</p>
+<ul>
+<li>error：抛出的错误。</li>
+<li>info：带有 componentStack key 的对象，其中包含有关组件引发错误的栈信息</li>
+</ul>
+<h3 id="6-什么是受控组件和非受控组件-⭐⭐⭐⭐"><a href="#6-什么是受控组件和非受控组件-⭐⭐⭐⭐" class="headerlink" title="6. 什么是受控组件和非受控组件 ⭐⭐⭐⭐"></a>6. 什么是受控组件和非受控组件 ⭐⭐⭐⭐</h3><p><strong>受控组件：</strong><br><br>在使用表单来收集用户输入时，例如<code>&lt;input&gt;&lt;select&gt;&lt;textearea&gt;</code>等元素都要绑定一个change事件，当表单的状态发生变化，就会触发onChange事件，更新组件的state。<br><br>这种组件在React中被称为受控组件，在受控组件中，组件渲染出的状态与它的value或checked属性相对应<br><br><em>缺点</em>：<br><br>表单元素的值都是由React组件进行管理，当有多个输入框，或者多个这种组件时，如果想同时获取到全部的值就必须每个都要编写事件处理函数，这会让代码看着很臃肿，所以为了解决这种情况，出现了非受控组件。</p>
+<p><strong>非受控组件：</strong></p>
+<p>input的值不受state控制，只是有初始值defaultValue， 一般通过ref拿dom节点的值去拿，现用现取</p>
+<p><em>使用场景：</em></p>
+<ul>
+<li>必须手动操作DOM元素，setState实现不了，比如文件上传<input type="file"></li>
+<li>某些富文本编辑器，需要传入DOM元素</li>
+</ul>
+<h3 id="7-介绍一下setState？-⭐⭐⭐⭐⭐"><a href="#7-介绍一下setState？-⭐⭐⭐⭐⭐" class="headerlink" title="7. 介绍一下setState？ ⭐⭐⭐⭐⭐"></a>7. 介绍一下setState？ ⭐⭐⭐⭐⭐</h3><p><strong>setState是同步还是异步的？</strong></p>
+<p><em>异步</em>：在 React 可以控制的地方，就为 true，比如在 React 生命周期事件和合成事件中，都会走合并操作，延迟更新的策略。<br><br><em>同步</em>：在 React 无法控制的地方，比如原生事件，具体就是在 addEventListener、setTimeout、setInterval 等事件中，就只能同步更新。</p>
+<p><strong>setState调用过程：</strong></p>
+<ol>
+<li>在调用setState后，setState里有一个enqueueSetState 方法将新的 state 放进组件的状态队列里，并调用 enqueueUpdate ，传入将要更新的实例对象；</li>
+<li>在 enqueueUpdate 方法里，会判断batchingStrategy对象的 isBatchingUpdates 属性，isBatchingUpdates默认为false，isBatchingUpdates标识着当前是否处于批量创建/更新组件的阶段如果轮到执行，就调用 batchedUpdates 方法来直接发起更新流程。（batchingStrategy 或许正是 React 内部专门用于管控批量更新的对象。）</li>
+<li>每当 React 调用 batchedUpdate 去执行更新动作时，会先把这个锁给“锁上”（置为 true），表明“现在正处于批量更新过程中”。当锁被“锁上”的时候，任何需要更新的组件都只能暂时进入 dirtyComponents 里排队等候下一次的批量更新，而不能随意“插队”。此处体现的“任务锁”的思想，是 React 面对大量状态仍然能够实现有序分批处理的基石。</li>
+</ol>
+<p><em>哪些能命中batchUpdate机制：</em></p>
+<ul>
+<li>生命周期（和它调用的函数）</li>
+<li>React中注册的事件（和它调用的函数）</li>
+<li>React可以“管理”的入口</li>
+</ul>
+<p><em>哪些不能命中batchUpdate机制：</em></p>
+<ul>
+<li>setTimeout setInterval等（和它调用的函数）</li>
+<li>自定义的DOM事件（和它调用的函数）</li>
+<li>React“管不到的入口”</li>
+</ul>
+<p><strong>不可变值：</strong><br><br>不要直接改变state，需要使用setState，同时修改时不能影响原来state的值<br></p>
+<p>当为数组时：<br>  <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+  list1<span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>list1<span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">,</span>  <span class="token comment">//追加</span>
+  list2<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token operator">...</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>list2<span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">]</span><span class="token punctuation">,</span>    <span class="token comment">//追加</span>
+  list3<span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>list3<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">,</span>  <span class="token comment">//截取</span>
+  list4<span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>list4<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token parameter">item</span> <span class="token operator">=></span> item <span class="token operator">></span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">,</span>    <span class="token comment">//筛选</span>
+  list5<span class="token operator">:</span> list5Copy  <span class="token comment">//其他操作</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><br>也可以用slice()后得到一个副本，然后进行操作，注意不能直接对this.state.list进行push pop splice等，这样违反不可变值</p>
+<p>当为对象时：</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">this</span><span class="token punctuation">,</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+  obj1<span class="token operator">:</span> Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>obj1<span class="token punctuation">,</span> <span class="token punctuation">&#123;</span>a<span class="token operator">:</span> <span class="token number">100</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  obj2<span class="token operator">:</span> <span class="token punctuation">&#123;</span><span class="token operator">...</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>obj2<span class="token punctuation">,</span> a<span class="token operator">:</span> <span class="token number">100</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>注意，不能直接对this.state.obj进行属性设置，这样违反不可变值</p>
+<h3 id="7-React中的props为什么是只读的？-⭐⭐⭐⭐"><a href="#7-React中的props为什么是只读的？-⭐⭐⭐⭐" class="headerlink" title="7. React中的props为什么是只读的？ ⭐⭐⭐⭐"></a>7. React中的props为什么是只读的？ ⭐⭐⭐⭐</h3><p>props只能从父组件流向子组件，React具有浓重的函数式编程的思想。<br><br>提到函数式编程就要提一个概念：纯函数。</p>
+<p>它有几个特点：</p>
+<ul>
+<li>给定相同的输入，总是返回相同的输出。</li>
+<li>过程没有副作用。</li>
+<li>不依赖外部状态。<br>this.props就是汲取了纯函数的思想。props的不可以变性就保证的相同的输入，页面显示的内容是一样的，并且不会产生副作用</li>
+</ul>
+<h3 id="8-react性能优化-⭐⭐⭐⭐"><a href="#8-react性能优化-⭐⭐⭐⭐" class="headerlink" title="8. react性能优化 ⭐⭐⭐⭐"></a>8. react性能优化 ⭐⭐⭐⭐</h3><p><strong>shouldComponentUpdate</strong></p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token function">shouldComponentUpdate</span><span class="token punctuation">(</span><span class="token parameter">nextProps<span class="token punctuation">,</span> nextState</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>nextState<span class="token punctuation">,</span>count <span class="token operator">!==</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>count<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>  <span class="token comment">//可以渲染</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token keyword">return</span> <span class="token boolean">false</span> <span class="token comment">//不重复渲染</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ol>
+<li>SCU默认返回true，即React默认重新渲染所有子组件</li>
+<li>必须配合“不可变值”一起使用</li>
+<li>可先不用SCU，有性能问题时再考虑使用</li>
+</ol>
+<p><em>SCU总结：</em><br>SCU是一个钩子函数，可以在里面自定义是否重新渲染的逻辑，它返回一个布尔值，如果没有自定义每次都会默认返回false，利用这个生命周期函数可以让不需要更新的子组件不更新来提升渲染性能，正是因为这个，react的不可变值原则非常重要，每次setState都应需要保证原来state不改变，不然使用SCU<br>或者PureComponent时浅比较就可能对数组和对象的变化出问题</p>
+<p><strong>PureComponent</strong><br><br>在React中，当prop或者state发生变化时，可以通过在shouldComponentUpdate生命周期函数中执行return false来阻止页面的更新，从而减少不必要的render执行。React.PureComponent会自动执行shouldComponentUpdate。不过，pureComponent中的 shouldComponentUpdate()进行的是浅比较，也就是说如果是引用数据类型的数据，只会比较不是同一个地址，而不会比较这个地址里面的数据是否一致，这样就省去虚拟DOM的生成和对比过程，达到提升性能的目的</p>
+<h3 id="9-什么是-Fragments：-⭐⭐⭐"><a href="#9-什么是-Fragments：-⭐⭐⭐" class="headerlink" title="9. 什么是 Fragments： ⭐⭐⭐"></a>9. 什么是 Fragments： ⭐⭐⭐</h3><ul>
+<li>React 中的一个常见模式是一个组件返回多个元素。Fragments 允许你将子列表分组，而无需向 DOM 添加额外节点。</li>
+<li>在React中，我们需要有一个父元素，同时从组件返回React元素。有时在DOM中添加额外的节点会很烦人。使用 Fragments，我们不需要在DOM中添加额外的节点。我们只需要用 React.Fragment 或才简写 &lt;&gt; 来包裹内容就行了</li>
+</ul>
+<h3 id="10-介绍一下传送门Portal：-⭐⭐⭐"><a href="#10-介绍一下传送门Portal：-⭐⭐⭐" class="headerlink" title="10. 介绍一下传送门Portal： ⭐⭐⭐"></a>10. 介绍一下传送门Portal： ⭐⭐⭐</h3><p>Portal 提供了一种将子节点渲染到存在于父组件以外的 DOM 节点的优秀的方案</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">ReactDOM<span class="token punctuation">.</span><span class="token function">createPortal</span><span class="token punctuation">(</span>child<span class="token punctuation">,</span> container<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>第一个参数（child）是任何可渲染的 React 子元素，例如一个元素，字符串或 fragment。第二个参数（container）是一个 DOM 元素。</p>
+<p>使用场景：</p>
+<ul>
+<li>父组件有overflow:hidden，想逃离父组件</li>
+<li>父组件z-index值太小</li>
+<li>fixed的元素要放到body第一层，有更好的浏览器兼容性<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">return</span> ReactDOM<span class="token punctuation">.</span><span class="token function">createPortal</span><span class="token punctuation">(</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>children<span class="token punctuation">,</span>
+  domNode
+<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li>
+</ul>
+<h3 id="11-类组件与函数组件有什么异同？-⭐⭐⭐"><a href="#11-类组件与函数组件有什么异同？-⭐⭐⭐" class="headerlink" title="11. 类组件与函数组件有什么异同？ ⭐⭐⭐"></a>11. 类组件与函数组件有什么异同？ ⭐⭐⭐</h3><p><strong>相同点：</strong></p>
+<p>组件是 React 可复用的最小代码片段，它们会返回要在页面中渲染的 React 元素。<br>呈现效果一致，可相互改写</p>
+<p><strong>不同点：</strong></p>
+<ol>
+<li>类组件是基于面向对象编程的，它主打的是继承、生命周期等核心概念<br><br>函数组件内核是函数式编程，主打的是 immutable、没有副作用、引用透明等特点。</li>
+<li>性能优化上，类组件主要依靠 shouldComponentUpdate阻断渲染来提升性能，而函数组件依靠 React.memo 缓存渲染结果来提升性能。</li>
+<li>类组件更容易上手，从未来趋势上看，由于React Hooks 的推出，函数组件成了社区未来主推的方案。</li>
+<li>类组件在未来时间切片与并发模式中，由于生命周期带来的复杂度，并不易于优化。函数组件本身轻量简单，且在 Hooks 的基础上提供了比原先更细粒度的逻辑组织与复用，更能适应 React 的未来发展。</li>
+</ol>
+<h3 id="12-React和Vue的区别-⭐⭐⭐⭐"><a href="#12-React和Vue的区别-⭐⭐⭐⭐" class="headerlink" title="12. React和Vue的区别 ⭐⭐⭐⭐"></a>12. React和Vue的区别 ⭐⭐⭐⭐</h3><p><strong>共同点：</strong></p>
+<ul>
+<li>都将注意力集中保持在核心库，而将其他功能如路由和全局状态管理交给相关的库</li>
+<li>都有自己的构建工具，能让你得到一个根据最佳实践设置的项目模板。</li>
+<li>都使用了Virtual DOM（虚拟DOM）提高重绘性能</li>
+<li>都有props的概念，允许组件间的数据传递</li>
+<li>都鼓励组件化应用，将应用分拆成一个个功能明确的模块，提高复用性</li>
+</ul>
+<p><strong>不同点：</strong></p>
+<ol>
+<li>数据流：Vue默认支持数据双向绑定，而React一直提倡单向数据流</li>
+<li>虚拟DOM：</li>
+</ol>
+<ul>
+<li>Vue宣称可以更快地计算出Virtual DOM的差异，这是由于它在渲染过程中，会跟踪每一个组件的依赖关系，不需要重新渲染整个组件树。</li>
+<li>对于React而言，每当应用的状态被改变时，全部子组件都会重新渲染。当然，这可以通过 PureComponent/shouldComponentUpdate这个生命周期方法来进行控制，但Vue将此视为默认的优化。</li>
+</ul>
+<ol start="3">
+<li>模板不同：React使用JSX拥抱JS，Vue使用模板拥抱html</li>
+<li>实现监听数据变化的原理不同</li>
+</ol>
+<ul>
+<li>Vue通过 getter/setter以及一些函数的劫持，能精确知道数据变化。</li>
+<li>React默认是通过比较引用的方式（diff）进行的，如果不优化可能导致大量不必要的VDOM的重新渲染。</li>
+</ul>
+<ol start="5">
+<li>扩展方面：</li>
+</ol>
+<ul>
+<li>react可以通过高阶组件来扩展</li>
+<li>而vue需要通过mixins来扩展</li>
+</ul>
+<h3 id="13-介绍一下虚拟DOM和Diff算法-⭐⭐⭐⭐⭐"><a href="#13-介绍一下虚拟DOM和Diff算法-⭐⭐⭐⭐⭐" class="headerlink" title="13. 介绍一下虚拟DOM和Diff算法 ⭐⭐⭐⭐⭐"></a>13. 介绍一下虚拟DOM和Diff算法 ⭐⭐⭐⭐⭐</h3><p><strong>使用虚拟dom的原因</strong></p>
+<ul>
+<li>传统开发模式中，操作DOM时会从构建DOM树从头到尾走一遍流程，操作DOM时他不知道后面还会不会有DOM操作，操作十次就构建了十次，前面构建的就浪费了，这样白白浪费了性能。</li>
+<li>虚拟DOM是将真实的DOM节点用JavaScript模拟出来，js对象表示dom结构，对象记录了dom节点的标签、属性和子节点将DOM变化的对比，放到 Js 层来做。</li>
+<li>用JS对象模拟DOM节点的好处是，页面的更新可以先全部反映在JS对象(虚拟DOM)上，操作内存中的JS对象的速度显然要更快，等更新完成后，再将最终的JS对象映射成真实的DOM，交由浏览器去绘制。</li>
+</ul>
+<p><strong>diff算法：</strong></p>
+<p><em>调和：</em> 将Virtual DOM树转换成actual DOM树的最少操作的过程，diff算法是调和的具体实现。</p>
+<p><strong>diff策略</strong></p>
+<p>React用 三大策略 将O(n^3)复杂度 转化为 O(n)复杂度</p>
+<ol>
+<li>策略一：忽略节点跨层级操作场景，两棵树只对同一层次节点，如果一个DOM节点在前后两次更新中跨越了层级，那么React不会尝试复用他。</li>
+<li>策略二：默认拥有相同类的两个组件 生成相似的树形结构，拥有不同类的两个组件 生成不同的树形结构。比对时：两个不同类型的元素会产生出不同的树。如果元素由div变为p，React会销毁div及其子孙节点，并新建p及其子孙节点</li>
+<li>策略三：开发者可以通过 key prop来暗示哪些子元素在不同的渲染下能保持稳定，对于同一层级的一组子节点，通过唯一id区分。</li>
+</ol>
+<p><strong>Diff流程</strong></p>
+<ol>
+<li>从Diff的入口函数reconcileChildFibers出发，该函数会根据newChild（即JSX对象）类型调用不同的处理函数</li>
+<li>当newChild类型为object、number、string，代表同级只有一个节点，会进入单节点Diff处理，当newChild类型为Array，同级有多个节点，会进入多节点Diff处理</li>
+<li>单节点Diff中首先判断是否存在对应的DOM节点，如果存在就判断能否复用，能否复用是通过key和type判断的，如果能复用就返回之前的副本，如果不能就删除节点并生成新的</li>
+<li>多节点Diff中，有三种情况：节点更新，节点新增或减少，节点位置变化，会先判断情况，再决定走哪个逻辑，更新，新增还是删除，此时有两轮遍历，第一轮遍历：处理更新的节点。第二轮遍历：处理剩下的不属于更新的节点。</li>
+</ol>
+<h3 id="14-React怎么达到数据持久化-⭐⭐⭐"><a href="#14-React怎么达到数据持久化-⭐⭐⭐" class="headerlink" title="14. React怎么达到数据持久化 ⭐⭐⭐"></a>14. React怎么达到数据持久化 ⭐⭐⭐</h3><ul>
+<li>通过redux存储全局数据时，如果用户刷新了网页，就会被全部清空，比如登录信息等。这时就会有全局数据持久化存储的需求。</li>
+<li>首先想到的就是localStorage，localStorage是没有时间限制的数据存储，可以通过它来实现数据的持久化存储。但是在已经使用redux来管理和存储全局数据的基础上，再去使用localStorage来读写数据，这样不仅是工作量巨大，还容易出错。</li>
+<li>所以用redux-persist。redux-persist会将redux的store中的数据缓存到浏览器的localStorage中</li>
+</ul>
+<h3 id="15-react-SSR服务端渲染-⭐⭐⭐"><a href="#15-react-SSR服务端渲染-⭐⭐⭐" class="headerlink" title="15. react SSR服务端渲染 ⭐⭐⭐"></a>15. react SSR服务端渲染 ⭐⭐⭐</h3><p><strong>客户端渲染：</strong></p>
+<p>首先请求html，然后下载html里的js/css文件，等待js加载完后，再向服务器请求数据，数据返回后客户端从0到完整得渲染</p>
+<p><em>缺点：</em></p>
+<ul>
+<li>由于页面显示过程要进行JS文件拉取和React代码执行，首屏加载时间会比较慢。</li>
+<li>对于SEO(搜索引擎优化)，完全无能为力，因为搜索引擎爬虫只认识html结构的内容，而不能识别JS代码内容</li>
+</ul>
+<p><strong>服务端渲染：</strong></p>
+<p>首先请求html，然后服务端请求数据，在服务端初始渲染，返回具有正确内容的界面，再请求js/css，返回后把剩下一小部分渲染完</p>
+<p><em>优点：</em></p>
+<ul>
+<li>客户端渲染下，除了加载html,还要等待js/css加载完成，之后执行js渲染出页面，这个期间用户一直在等待</li>
+<li>服务端只需要加载当前页面的内容，而不需要一次性加载全部的 js 文件。等待时间大大缩短，首屏加载变快。</li>
+</ul>
+<p><em>缺点：</em></p>
+<ul>
+<li>不利于前后端分离，开发效率低。</li>
+<li>占用服务器资源。</li>
+</ul>
+<h3 id="16-React-createClass与React-Component区别：-⭐⭐⭐"><a href="#16-React-createClass与React-Component区别：-⭐⭐⭐" class="headerlink" title="16. React.createClass与React.Component区别： ⭐⭐⭐"></a>16. React.createClass与React.Component区别： ⭐⭐⭐</h3><ol>
+<li>函数this自绑定</li>
+</ol>
+<ul>
+<li>React.createClass创建的组件，其每一个成员函数的this都有React自动绑定，函数中的this会被正确设置。</li>
+<li>React.Component创建的组件，其成员函数不会自动绑定this，需要开发者手动绑定，否则this不能获取当前组件实例对象。</li>
+</ul>
+<ol start="2">
+<li>组件属性类型propTypes及其默认props属性defaultProps配置不同</li>
+</ol>
+<ul>
+<li>React.createClass在创建组件时，有关组件props的属性类型及组件默认的属性会作为组件实例的属性来配置，其中defaultProps是使用getDefaultProps的方法来获取默认组件属性的</li>
+<li>React.Component在创建组件时配置这两个对应信息时，他们是作为组件类的属性，不是组件实例的属性，也就是所谓的类的静态属性来配置的。</li>
+</ul>
+<ol start="3">
+<li>组件初始状态state的配置不同</li>
+</ol>
+<ul>
+<li>React.createClass创建的组件，其状态state是通过getInitialState方法来配置组件相关的状态；</li>
+<li>React.Component创建的组件，其状态state是在constructor中像初始化组件属性一样声明的。</li>
+</ul>
+<h3 id="17-react渲染问题-⭐⭐⭐⭐"><a href="#17-react渲染问题-⭐⭐⭐⭐" class="headerlink" title="17. react渲染问题 ⭐⭐⭐⭐"></a>17. react渲染问题 ⭐⭐⭐⭐</h3><p><em>哪些方法会触发 react 重新渲染：</em></p>
+<ol>
+<li>setState（）方法被调用</li>
+</ol>
+<ul>
+<li>当 setState 传入 null 时，并不会触发 render</li>
+</ul>
+<ol start="2">
+<li>父组件重新渲染</li>
+</ol>
+<ul>
+<li>只要父组件重新渲染了，即使传入子组件的 props 未发生变化，那么子组件也会重新渲染，进而触发 render</li>
+</ul>
+<p><em>重新渲染 render 会做些什么?</em></p>
+<ol>
+<li>会对新旧 VNode 进行对比，也就是我们所说的Diff算法。</li>
+<li>对新旧两棵树进行一个深度优先遍历，这样每一个节点都会一个标记，在到深度遍历的时候，每遍历到一和个节点，就把该节点和新的节点树进行对比，如果有差异就放到一个对象里面</li>
+<li>遍历差异对象，根据差异的类型，根据对应对规则更新VNode</li>
+<li>React 的处理 render 的基本思维模式是每次一有变动就会去重新渲染整个应用</li>
+</ol>
+<p><em>React如何判断什么时候重新渲染组件？</em></p>
+<ul>
+<li>组件状态的改变可以因为props的改变，或者直接通过setState方法改变。</li>
+<li>组件获得新的状态，然后React决定是否应该重新渲染组件。只要组件的state发生变化，React就会对组件进行重新渲染。</li>
+<li>因为React中的shouldComponentUpdate方法默认返回true，这就是导致每次更新都重新渲染的原因</li>
+<li>需要重写shouldComponentUpdate方法让它根据情况返回true或者false来告诉React什么时候重新渲染什么时候跳过重新渲染</li>
+</ul>
+<h3 id="18-React-Router有哪两种模式-⭐⭐⭐⭐⭐"><a href="#18-React-Router有哪两种模式-⭐⭐⭐⭐⭐" class="headerlink" title="18. React Router有哪两种模式 ⭐⭐⭐⭐⭐"></a>18. React Router有哪两种模式 ⭐⭐⭐⭐⭐</h3><p>hash模式（默认）</p>
+<p>如<a target="_blank" rel="noopener" href="http://abc.com/#/user/10">http://abc.com/#/user/10</a></p>
+<ol>
+<li>hash 模式是一种把前端路由的路径用井号 # 拼接在真实 URL 后面的模式。当井号 # 后面的路径发生变化时，浏览器并不会重新发起请求，而是会触发 hashchange 事件，不会被包括在 HTTP 请求中。</li>
+<li>在hash模式下，所有的页面跳转都是客户端进行操作，不需要后端的支持，因此对于页面拦截更加灵活，但每次url的改变不属于一次http请求</li>
+<li>hash的改变不会导致页面的刷新，通过window.onhashchange监听hash的改变，借此实现无刷新跳转的功能<br>H5 history</li>
+</ol>
+<p>如<a target="_blank" rel="noopener" href="http://abc.com/user/10">http://abc.com/user/10</a></p>
+<ol>
+<li>切换历史状态包括back、forward、go，修改历史状态包括了 pushState,  replaceState两个方法，通过pushState把页面的状态保存在state对象中，当页面的url再变回这个url时，可以通过event.state取到这个state对象，从而可以对页面状态进行还原</li>
+<li>前端的URL必须和向发送请求后端URL保持一致，否则会报404错误。不怕前进，不怕后退，就怕刷新，f5，（如果后端没有准备的话，会返回404）,因为刷新是实实在在地去请求服务器的。</li>
+<li>使用简单，比较美观</li>
+</ol>
+<h3 id="19-react-router-实现的思想：-⭐⭐⭐"><a href="#19-react-router-实现的思想：-⭐⭐⭐" class="headerlink" title="19. react-router 实现的思想： ⭐⭐⭐"></a>19. react-router 实现的思想： ⭐⭐⭐</h3><p>  基于 history 库来实现上述不同的客户端路由实现思想，并且能够保存历史记录等，磨平浏览器差异，上层无感知，通过维护的列表，在每次 URL 发生变化的回收，通过配置的 路由路径，匹配到对应的 Component，并且 render</p>
+<h3 id="20-如何配置-React-Router-实现路由切换-⭐⭐⭐"><a href="#20-如何配置-React-Router-实现路由切换-⭐⭐⭐" class="headerlink" title="20. 如何配置 React-Router 实现路由切换: ⭐⭐⭐"></a>20. 如何配置 React-Router 实现路由切换: ⭐⭐⭐</h3><ol>
+<li>使用<code>&lt;Route&gt; </code>组件</li>
+<li>结合使用 <code>&lt;Switch&gt;</code> 组件和 <code>&lt;Route&gt;</code> 组件，一个 <code>&lt;Switch&gt;</code> 会遍历其所有的子 <code>&lt;Route&gt;</code>元素，并仅渲染与当前地址匹配的第一个元素。</li>
+<li>使用 <code>&lt;Link&gt;、&lt;NavLink&gt;、&lt;Redirect&gt;</code> 组件</li>
+</ol>
+<ul>
+<li>Link：<code>&lt;Link&gt;</code> 组件来在你的应用程序中创建链接。无论你在何处渲染一个<code>&lt;Link&gt;</code> ，都会在应用程序的 HTML 中渲染锚（<code>&lt;a&gt;</code>）</li>
+<li>NavLink：<code>&lt;NavLink&gt;</code>会在匹配上当前的url的时候给已经渲染的元素添加参数（css样式等）</li>
+<li>Redirect：<code>&lt;Redirect&gt;</code>组件实现路由的重定，属性一般使用from和to</li>
+</ul>
+<h3 id="21-react-router-里的-Link-标签和-a-标签的区别-⭐⭐⭐"><a href="#21-react-router-里的-Link-标签和-a-标签的区别-⭐⭐⭐" class="headerlink" title="21. react-router 里的 Link 标签和 a 标签的区别 ⭐⭐⭐"></a>21. react-router 里的 Link 标签和 a 标签的区别 ⭐⭐⭐</h3><p>从最终渲染的 DOM 来看，这两者都是链接，都是标签<br>区别∶</p>
+<ul>
+<li>  <code>&lt;Link&gt;</code>一般配合<code>&lt;Route&gt;</code> 使用，react-router接管了其默认的链接跳转行为</li>
+<li>  <code>&lt;Link&gt;</code> 的“跳转”行为只会触发相匹配的<code>&lt;Route&gt;</code>对应的页面内容更新，而不会刷新整个页面。<br><code>&lt;Link&gt;</code>做了3件事情:</li>
+<li>有onclick那就执行onclick</li>
+<li>click的时候阻止a标签默认事件</li>
+<li>根据跳转href(即是to)，用history (web前端路由两种方式之一，history 和 hash)跳转，此时只是链接变了，并没有刷新页面而<code>&lt;a&gt;</code>标签就是普通的超链接了，用于从当前页面跳转到href指向的另一 个页面(非锚点情况)。</li>
+</ul>
+<h3 id="22-React-Router如何获取URL的参数和历史对象（路由传值）：-⭐⭐⭐"><a href="#22-React-Router如何获取URL的参数和历史对象（路由传值）：-⭐⭐⭐" class="headerlink" title="22. React-Router如何获取URL的参数和历史对象（路由传值）： ⭐⭐⭐"></a>22. React-Router如何获取URL的参数和历史对象（路由传值）： ⭐⭐⭐</h3><p><strong>获取URL的参数：</strong></p>
+<ol>
+<li>路由配置还是普通的配置，如：<code>&#39;admin&#39;</code>，传参方式如：<code>&#39;admin?id=&#39;1111&#39;&#39;</code>。通过<code>this.props.location.search</code>获取url获取到一个字符串<code>&#39;?id=&#39;1111&#39;</code>,可以用url，qs，querystring，浏览器提供的api URLSearchParams对象或者自己封装的方法去解析出id的值。</li>
+<li>动态路由传值：<code>通过this.props.match.params.id</code> 取得url中的动态路由id部分的值，除此之外还可以通过<code>useParams（Hooks）</code>来获取</li>
+<li>通过query或state传值：在Link组件的to属性中可以传递对象<code>&#123;pathname:&#39;/admin&#39;,query:&#39;111&#39;,state:&#39;111&#39;&#125;</code>，通过<code>this.props.location.state或this.props.location.query</code>来获取即可，缺点：刷新页面数据丢失</li>
+</ol>
+<p><strong>获取历史对象：</strong></p>
+<ol>
+<li>useHistory();</li>
+<li>使用this.props.history获取历史对象</li>
+</ol>
+<h3 id="23-介绍一下Redux-⭐⭐⭐⭐⭐"><a href="#23-介绍一下Redux-⭐⭐⭐⭐⭐" class="headerlink" title="23. 介绍一下Redux ⭐⭐⭐⭐⭐"></a>23. 介绍一下Redux ⭐⭐⭐⭐⭐</h3><p>Redux是React的一个状态管理库，它基于flux，简化了React中的单向数据流，状态管理完全从React中抽象出来。</p>
+<p><em>工作流程：</em></p>
+<ul>
+<li>在React中，组件连接到redux ，如果要访问redux，需要派发一个action到 Reducer。</li>
+<li>当reducer收到action时，通过 switch…case 语法比较 action 中type。 匹配时，更新对应的内容返回新的 state。</li>
+<li>当Redux状态更改时，连接到Redux的组件将接收新的状态作为props。当组件接收到这些props时，它将进入更新阶段并重新渲染 UI。</li>
+</ul>
+<p><strong>Redux 的三大原则：</strong></p>
+<ol>
+<li>单一数据源（一个Redux应用只有一个store），也是单向的数据流；</li>
+<li>state只读（唯一改变 state 的方法就是触发 action，action 是一个用于描述已发生事件的普通对象。）；</li>
+<li>使用纯函数（reducer）来修改state。</li>
+</ol>
+<p><strong>Redux中间件：</strong></p>
+<ul>
+<li>Redux 的中间件提供的是位于 action 被发起之后，到达 reducer 之前的扩展点，</li>
+<li>原本 view -→&gt; action -&gt; reducer -&gt; store 的数据流加上中间件后变成了 view -&gt; action -&gt; middleware -&gt; reducer -&gt; store</li>
+<li>在这一环节可以做一些”副作用”的操作，如异步请求、打印日志等</li>
+<li>redux中间件接受一个对象作为参数，对象的参数上有两个字段 dispatch 和 getState，分别代表着 Redux Store 上的两个同名函数。</li>
+<li>柯里化函数两端一个是 middewares，一个是store.dispatch</li>
+</ul>
+<h3 id="24-Redux-和-Vuex-有什么区别，它们的共同思想-⭐⭐⭐⭐"><a href="#24-Redux-和-Vuex-有什么区别，它们的共同思想-⭐⭐⭐⭐" class="headerlink" title="24. Redux 和 Vuex 有什么区别，它们的共同思想 ⭐⭐⭐⭐"></a>24. Redux 和 Vuex 有什么区别，它们的共同思想 ⭐⭐⭐⭐</h3><p><strong>共同点：</strong></p>
+<ol>
+<li>都是通过store来作为全局状态存储对象。</li>
+<li>不能直接修改Store中状态，（vuex中的mutation、redux中的reducer），只允许同步操作；</li>
+</ol>
+<p><strong>不同点：</strong></p>
+<ol>
+<li>Vuex取消了Redux中Action的概念。不同于Redux认为状态变更必须是由一次”行为”触发，Vuex仅仅认为在任何时候触发状态变化只需要进行mutation即可。Redux的Action必须是一个对象，而 Vuex认为只要传递必要的参数即可，形式不做要求。</li>
+<li> Vuex也弱化了Redux中的reducer的概念。reducer在计算机领域语义应该是”规约”，在这里意思应该是根据旧的state和Action的传入参数，“规约”出新的state。在 Vuex中，对应的是mutation，即”转变”，只是根据入参对旧state进行”转变”而已。</li>
+</ol>
+<h3 id="25-connect有什么作用：-⭐⭐⭐⭐"><a href="#25-connect有什么作用：-⭐⭐⭐⭐" class="headerlink" title="25. connect有什么作用： ⭐⭐⭐⭐"></a>25. connect有什么作用： ⭐⭐⭐⭐</h3><p>负责连接React和Redux</p>
+<p><strong>获取state</strong></p>
+<p>connect 通过 context获取 Provider 中的 store，通过 store.getState() 获取整个store tree 上所有state</p>
+<p><strong>使用</strong></p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">connect</span><span class="token punctuation">(</span>mapStateToProps<span class="token punctuation">,</span> mapDispatchToProps<span class="token punctuation">)</span><span class="token punctuation">(</span>AppUI<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//也可使用装饰器</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><em>mapStateToProps：</em> 此函数将state映射到 props 上，因此只要state发生变化，新 state 会重新映射到 props。 这是订阅store的方式。</p>
+<p><em>mapDispatchToProps：</em> 用来建立组件的参数到store.dispatch方法的映射。触发action更新reducer，进而更新state，引起UI数据的变化</p>
+<h2 id="感谢阅读"><a href="#感谢阅读" class="headerlink" title="感谢阅读"></a>感谢阅读</h2><p>非常感谢您到阅读到最后，如果有错误希望您能够指出，以免误导其他人，如果您觉得对您有帮助的话，希望能够点个赞，加个关注，有任何问题都可以联系我，希望能够一起进步。</p>
+<p>最后祝您前程似锦，我们各自攀登，高处相见🌈！</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Kerwin丶R</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://kerwin-r.github.io/2021/08/15/qian-duan-ji-chu-react/">http://kerwin-r.github.io/2021/08/15/qian-duan-ji-chu-react/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Kerwin丶R</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/">
+                                    <span class="chip bg-color">前端基础</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2021/08/15/qian-duan-ji-chu-react/">
+                    <div class="card-image">
+                        
+                        <img src="/../contentImg/React.png" class="responsive-img" alt="前端基础--React">
+                        
+                        <span class="card-title">前端基础--React</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            React作为当前国内前端两大框架之一，是我们必须掌握的，更是进大厂必不可少的，本文详细介绍了react的基础和原理，让你对react有更深的认识和见解。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-15
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    前端基础
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/">
+                        <span class="chip bg-color">前端基础</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/07/15/qian-duan-ji-chu-ji-suan-ji-wang-luo/">
+                    <div class="card-image">
+                        
+                        <img src="/../contentImg/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.png" class="responsive-img" alt="前端基础--计算机网络">
+                        
+                        <span class="card-title">前端基础--计算机网络</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            计算机网络知识是每个程序员的必备基础，任何消息文件的传输都与网络相关，本文介绍了作为一个前端应该掌握的计算机网络基础知识
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-15
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    前端基础
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/">
+                        <span class="chip bg-color">前端基础</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('5'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2021</span>
+            
+            <span id="year">2021</span>
+            <a href="/about" target="_blank">Kerwin丶R</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">31k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2021";
+                    var startMonth = "5";
+                    var startDate = "1";
+                    var startHour = "22";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=709596687" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 709596687" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
